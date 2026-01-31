@@ -139,5 +139,4 @@ while roomNumber < 6 :
             roomNumber += 1
     else :
         print("You can't escape the last room!")
-
 print("Game Over!")
