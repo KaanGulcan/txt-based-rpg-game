@@ -17,7 +17,7 @@ class Character():
         self.char_damage = damage
 
     def attack(self):
-        if attackChance < 8 and attackChance > 0 :
+        if attackChance < 8 and attackChance > 0 : # 70% chance to attack
             enemies[enemyNumber].enemy_health -= self.char_damage
             print(f"{self.char_damage} damage was given!")
         else :
@@ -25,7 +25,7 @@ class Character():
 
     def take_damage(self):
         print("Enemy is attacking...")
-        if attackChance < 5 and attackChance > 0 :
+        if attackChance < 5 and attackChance > 0 : # 40% chance to take damage
             self.char_health -= enemies[enemyNumber].enemy_damage
             print(f"{enemies[enemyNumber].enemy_damage} damage was taken!")
         else :
@@ -37,7 +37,7 @@ class Character():
             return 0
 
     def escape(self):
-        if escapeChance < 10 and escapeChance > 0 :
+        if escapeChance < 10 and escapeChance > 0 : # 90% chance to escape
             self.char_health -= 20
             print("You escape the room and took 20 damage")
             return 1
@@ -139,4 +139,5 @@ while roomNumber < 6 :
             roomNumber += 1
     else :
         print("You can't escape the last room!")
+
 print("Game Over!")
